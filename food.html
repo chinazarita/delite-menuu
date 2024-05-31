@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="food.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+        <div>
+          <p><button class="button" onclick="openMenu()" id="btnmenu">menu</button></p>
+          <p><button class="button" onclick="openContact()" id="btncontact">contact</button></p>
+        </div>
+        <div class="logo">logo</div>
+        <div class="monday">
+          <p style="font-size: 20px">monday - friday 10-23 | saturday 14-02</p>
+          <p>42 village St, New York</p>
+          <p>powered by <a href="#" style="color: #fff">Delight</a></p>
+        </div>
+      </div>
+      <div class="position" id="menu">
+        <div class="menu-container">
+          <div class="cont-menu">
+            <div class="dark">
+              <span class="close-button" onclick="closemenu()">x</span>
+              <h1>Starters</h1>
+            </div>
+            <div class="cont">
+              <h4>Tomato Soup <b>$2.50</b></h4>
+              <h4>Chicken Salad <b>$3.50</b></h4>
+              <h4>Bread and Butter <b>$1.00</b></h4>
+            </div>
+            <div class="black">
+              <h1>Main Courses</h1>
+            </div>
+            <div class="cont">
+              <h4>Grilled Fish and Potatoes <b>$8.50</b></h4>
+              <h4>Italian Pizza <b>$5.50</b></h4>
+              <h4>Veggie Pasta <b>$4.00</b></h4>
+              <h4>Chicken and Potatoes <b>$6.50</b></h4>
+              <h4>Deluxe Burger <b>$5.00</b></h4>
+            </div>
+            <div class="black">
+              <h1>Desserts</h1>
+            </div>
+            <div class="cont">
+              <h4>Fruit Salad <b>$2.50</b></h4>
+              <h4>Ice cream <b>$2.00</b></h4>
+              <h4>Chocolate Cake <b>$4.00</b></h4>
+              <h4>Cheese <b>$5.50</b></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-container" id="contact">
+        <div class="dark">
+          <span class="close-button" onclick="closecontact()">x</span>
+          <h1>Contact</h1>
+        </div>
+        <div class="form-holder">
+          <p>
+            Reserve a table, ask for today's special or just send us a message:
+          </p>
+          <form action="">
+            <p>
+              <input
+                type="text"
+                class="input"
+                name="name"
+                placeholder="Name"
+                required
+              />
+            </p>
+            <p>
+              <input
+                type="number"
+                class="input"
+                name="number"
+                placeholder="How many people"
+                required
+              />
+            </p>
+            <p>
+              <input
+                type="datetime-local"
+                class="input"
+                name="date"
+                value="2024-02-06T10:45"
+              />
+            </p>
+            <p>
+              <textarea
+                name="message"
+                id=""
+                class="input"
+                placeholder="Message \ Special requirements"
+              ></textarea>
+            </p>
+            <p><button type="submit" class="input-button">SEND MESSAGE</button></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+        function openMenu() {
+            document.getElementById('menu').style.display = 'block';
+            document.querySelector('#btncontact').disabled = true;
+        }
+        function openContact() {
+            document.getElementById('contact').style.display = 'block';
+            document.querySelector('#btnmenu').disabled = true;
+        }
+        function closemenu() {
+            document.getElementById('menu').style.display = 'none';
+            document.querySelector('#btncontact').disabled = false;
+        }
+        function closecontact() {
+            document.getElementById('contact').style.display = 'none';
+            document.querySelector('#btnmenu').disabled = false;
+            
+        }
+    </script>
+  </body>
+</html>
